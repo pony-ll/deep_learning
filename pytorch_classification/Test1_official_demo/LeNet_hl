@@ -1,0 +1,46 @@
+digraph {
+	graph [bgcolor="#FFFFFF" color="#7C96BC" fontcolor="#202020" fontname=Verdana fontsize=10 margin="0,0" pad="1.0,0.5" rankdir=LR]
+	node [color="#7C96BC" fillcolor="#BCD6FC" fontcolor="#202020" fontname=Verdana fontsize=10 margin="0,0" shape=box style=filled]
+	edge [color="#7C96BC" fontcolor="#202020" fontname=Verdana fontsize=10 style=solid]
+	"/outputs/37" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>MaxPool2x2</td></tr></table>>]
+	"/outputs/42" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>MaxPool2x2</td></tr></table>>]
+	"/outputs/49" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>MaxPool2x2</td></tr></table>>]
+	"/outputs/56" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>MaxPool2x2</td></tr></table>>]
+	"/outputs/63" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>MaxPool2x2</td></tr></table>>]
+	"/outputs/64" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>AveragePool1x1</td></tr></table>>]
+	"/outputs/65" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Flatten</td></tr></table>>]
+	"/outputs/68" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Constant</td></tr></table>>]
+	"/outputs/69" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Constant</td></tr></table>>]
+	"/outputs/70/71" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Dropout</td></tr></table>>]
+	"/outputs/74" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Constant</td></tr></table>>]
+	"/outputs/75" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Constant</td></tr></table>>]
+	"/outputs/76/77" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Dropout</td></tr></table>>]
+	"/outputs/78" [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Linear</td></tr></table>>]
+	3278835715720600203 [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Linear &gt; Relu</td></tr></table>>]
+	13430480750605133315 [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Linear &gt; Relu</td></tr></table>>]
+	6743153379441809497 [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Conv3x3 &gt; Relu</td></tr><tr><td align='right' cellpadding='2'>x2</td></tr></table>>]
+	16820105447286990736 [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Conv3x3 &gt; Relu</td></tr><tr><td align='right' cellpadding='2'>x2</td></tr></table>>]
+	13767124768426067189 [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Conv3x3 &gt; Relu</td></tr><tr><td align='right' cellpadding='2'>x3</td></tr></table>>]
+	13452270034136137492 [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Conv3x3 &gt; Relu</td></tr><tr><td align='right' cellpadding='2'>x3</td></tr></table>>]
+	2331913027515039723 [label=<<table border='0' cellborder='0' cellpadding='0'><tr><td cellpadding='6'>Conv3x3 &gt; Relu</td></tr><tr><td align='right' cellpadding='2'>x3</td></tr></table>>]
+	"/outputs/63" -> "/outputs/64"
+	"/outputs/64" -> "/outputs/65"
+	"/outputs/68" -> "/outputs/70/71"
+	"/outputs/69" -> "/outputs/70/71"
+	"/outputs/74" -> "/outputs/76/77"
+	"/outputs/75" -> "/outputs/76/77"
+	"/outputs/76/77" -> "/outputs/78"
+	"/outputs/65" -> 3278835715720600203
+	3278835715720600203 -> "/outputs/70/71"
+	"/outputs/70/71" -> 13430480750605133315
+	13430480750605133315 -> "/outputs/76/77"
+	6743153379441809497 -> "/outputs/37"
+	"/outputs/37" -> 16820105447286990736
+	16820105447286990736 -> "/outputs/42"
+	"/outputs/42" -> 13767124768426067189
+	13767124768426067189 -> "/outputs/49"
+	"/outputs/49" -> 13452270034136137492
+	13452270034136137492 -> "/outputs/56"
+	"/outputs/56" -> 2331913027515039723
+	2331913027515039723 -> "/outputs/63"
+}
